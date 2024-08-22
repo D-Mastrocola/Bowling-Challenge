@@ -1,0 +1,15 @@
+C:\Users\mastr\Desktop\Bowling-Challenge\bin\Debug\net8.0\BowlingChallenge.exe
+C:\Users\mastr\Desktop\Bowling-Challenge\bin\Debug\net8.0\BowlingChallenge.deps.json
+C:\Users\mastr\Desktop\Bowling-Challenge\bin\Debug\net8.0\BowlingChallenge.runtimeconfig.json
+C:\Users\mastr\Desktop\Bowling-Challenge\bin\Debug\net8.0\BowlingChallenge.dll
+C:\Users\mastr\Desktop\Bowling-Challenge\bin\Debug\net8.0\BowlingChallenge.pdb
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.AssemblyInfoInputs.cache
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.AssemblyInfo.cs
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.csproj.CoreCompileInputs.cache
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.sourcelink.json
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.dll
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\refint\BowlingChallenge.dll
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.pdb
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\BowlingChallenge.genruntimeconfig.cache
+C:\Users\mastr\Desktop\Bowling-Challenge\obj\Debug\net8.0\ref\BowlingChallenge.dll
