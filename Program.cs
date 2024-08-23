@@ -19,12 +19,42 @@ namespace BowlingChallenge
         }
         public static void displayScore()
         {
-            string scoreStr = "|";
+            string scoreStr = "";
+
+            string topAndBot = "";
+            int[] scoreIntArr = new int[numOfFrames];
+
+            /*for(int i = 0; i < scoreList.Length i++)
+            {
+                if (scoreList[i] == "")
+                {
+                    break;
+                }
+
+                if (scoreList[i] == "X")
+                {
+                    if(scoreList[i] != "X" && scoreList[i].Length > 1)
+                    {
+                        if(scoreList[i] != "X")
+                    }
+                }
+            }*/
             for (int i = 0; i < scoreList.Length; i++)
             {
-                scoreStr += scoreList[i] + '|';
-                
+                if (scoreList[i] != "")
+                {
+                    topAndBot += "___";
+                    if(scoreList[i] == "X")
+                    {
+                        scoreStr += " " + scoreList[i] + "|";
+                    } else
+                    {
+                        scoreStr += scoreList[i] + "|";
+                    }
+
+                }
             }
+            scoreStr = "\n" + topAndBot + "\n" + scoreStr + "\n" + topAndBot;
             Console.WriteLine("==========================\n\n" + scoreStr + "\n\n==========================\n\n");
         }
         public static void play()
@@ -76,18 +106,27 @@ namespace BowlingChallenge
                 Console.WriteLine(bowl);
                 if(bowl == currentPinCount)
                 {
-                        if (bowlCount == 1)
+                    if (bowlCount == 1)
+                    {
+                        //Strike
+                        scoreList[currentFrame - 1] += "X";
+                    }
+                    else if (currentFrame == numOfFrames)
+                    {
+                        if (scoreList[currentFrame - 1][(bowlCount - 2)] == 'X')
                         {
                             //Strike
                             scoreList[currentFrame - 1] += "X";
-                        } else
-                        {
-                            //Spare
-                            scoreList[currentFrame - 1] += "/";
                         }
-                        currentFrame++;
-                        bowlCount = 0;
-                        currentPinCount = totalPins;
+                    }
+                    else
+                    {
+                        //Spare
+                        scoreList[currentFrame - 1] += "/";
+                    }
+
+                    //Unless its the 10th frame move to next frame
+                    if (currentFrame != numOfFrames) bowlCount = 2;
                 }else if(bowlCount == 2 && (bowl + Int32.Parse(scoreList[currentFrame - 1][0].ToString()) == totalPins)) { 
                         //Spare
                         scoreList[currentFrame - 1] += "/";
@@ -111,7 +150,7 @@ namespace BowlingChallenge
                     } else
                     {
                         //Check if player has thrown a spare or strike to get the third bowl
-                        if (scoreList[currentFrame - 1][bowlCount-1] != 'X' && scoreList[currentFrame - 1][bowlCount - 1] != '/')
+                        if (scoreList[currentFrame - 1][bowlCount-2] != 'X' && scoreList[currentFrame - 1][bowlCount - 2] != '/')
                         {
                             currentFrame++;
                             bowlCount = 0;
@@ -121,6 +160,7 @@ namespace BowlingChallenge
                         
                 }
             }
+            displayScore();
         }
         public static void viewHighScores()
         {
