@@ -24,21 +24,48 @@ namespace BowlingChallenge
             string topAndBot = "";
             int[] scoreIntArr = new int[numOfFrames];
 
-            /*for(int i = 0; i < scoreList.Length i++)
+            for(int i = 0; i < scoreList.Length i++)
             {
                 if (scoreList[i] == "")
                 {
                     break;
                 }
-
-                if (scoreList[i] == "X")
+                if (i != numOfFrames)
                 {
-                    if(scoreList[i] != "X" && scoreList[i].Length > 1)
+                    if (scoreList[i] == "X" )
                     {
-                        if(scoreList[i] != "X")
+                        if(coreList[i + 1] != "")
+                        {
+                            //If Frame After Strike isnt another strike
+                            if (scoreList[i + 1] != "X")
+                            {
+                                //If Frame After Strike is a Spare
+                                if (scoreList[i + 1][1] == "/")
+                                {
+                                    scoreIntArr[i] = 20;
+                                }
+                                else
+                                {
+                                    scoreIntArr = 10 + Int32.Parse(scoreList[i + 1][0] + Int32.Parse(scoreList[i + 1][1])
+                                }
+                            }
+                            else
+                            {
+                                if(coreList[i + 2] != "")
+                                {
+
+                                }
+                                break;
+                            }
+                        } else
+                        {
+                            break;
+                        }
+                        
                     }
                 }
-            }*/
+                
+            }
             for (int i = 0; i < scoreList.Length; i++)
             {
                 if (scoreList[i] != "")
